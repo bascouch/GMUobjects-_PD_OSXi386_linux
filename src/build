@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cc -I../../src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~.o -c bufGranul2~.c 
-cc -I../../src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~_DSP.o -c bufGranul2~_DSP.c
+cc -I./pd-0.42-5/src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~.o -c bufGranul2~.c 
+cc -I./pd-0.42-5/src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~_DSP.o -c bufGranul2~_DSP.c
 cc -export-dynamic -shared -flat_namespace -o ../bufGranul~.pd_linux bufGranul~.o bufGranul~_DSP.o
 #cp -f bufGranul~.pd_darwin /Users/charles/pd
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cc -I../../src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o synGranul~.o -c synGranul~.c 
+cc -I./pd-0.42-5/src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o synGranul~.o -c SynGranul~.c 
 cc -export-dynamic -shared -flat_namespace -o ../synGranul~.pd_linux synGranul~.o
 #cp -f synGranul~.pd_darwin /Users/charles/pd
 
