@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cc -I../../src -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o synGranul~.o -c synGranul~.c 
+cc -export-dynamic -shared -flat_namespace -o ../synGranul~.pd_linux synGranul~.o
+#cp -f synGranul~.pd_darwin /Users/charles/pd
+
+
+## -undefined suppress
