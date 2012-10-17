@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cc -I./pd-0.42-5/src -arch i386 -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~.o -c bufGranul2~.c 
-cc -I./pd-0.42-5/src -arch i386 -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~_DSP.o -c bufGranul2~_DSP.c
-cc -bundle -arch i386 -flat_namespace -undefined suppress -o ../bufGranul~.pd_darwin bufGranul~.o bufGranul~_DSP.o
+cc -I./pd-0.42-5/src -arch i386 -mmacosx-version-min=10.5 -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~.o -c bufGranul2~.c 
+cc -I./pd-0.42-5/src -arch i386 -mmacosx-version-min=10.5 -DPD -O2 -Wall -W -Wshadow -Wstrict-prototypes -Wno-unused -Wno-parentheses -Wno-switch -o bufGranul~_DSP.o -c bufGranul2~_DSP.c
+cc -bundle -arch i386 -mmacosx-version-min=10.5 -flat_namespace -undefined suppress -o ../bufGranul~.pd_darwin bufGranul~.o bufGranul~_DSP.o
 #cp -f bufGranul~.pd_darwin /Users/charles/pd
 
 
