@@ -613,7 +613,7 @@ t_int *bufGranul_perform2(t_int *w)
 		t_active_buf = buffer_check(x,x->x_active_buf);
 		t_active_env = bufferenv_check(x,x->x_active_env);
 		// %%%%%%%%%%     creation de grains   %%%%%%%%%%%%%%%%%
-   			
+   		
    		p=nvoices;
    		
 		// Dans le cas d'un grain declenche par un bang

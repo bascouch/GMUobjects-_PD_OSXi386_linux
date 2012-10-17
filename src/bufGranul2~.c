@@ -939,8 +939,8 @@ int bufGranul_bufferinfos(t_bufGranul *x)
 			     }
 			     else 
 			     {
-				garray_usedindsp(a);
-				
+					garray_usedindsp(a);
+					x->x_env_buf[cpt] = cpt;
 				}
 			
 		}

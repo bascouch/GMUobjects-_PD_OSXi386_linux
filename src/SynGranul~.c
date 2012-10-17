@@ -2813,8 +2813,8 @@ int synGranul_bufferinfos(t_synGranul *x)
 			     }
 			     else 
 			     {
-				garray_usedindsp(a);
-				
+					garray_usedindsp(a);
+					x->x_env_buf[cpt] = cpt;
 				}
 			
 		}
@@ -2924,7 +2924,11 @@ void synGranul_setenv(t_synGranul *x, t_symbol *msg, short ac, t_atom * av)
         	 pd_error(x, "%s: bad template for syngranul~", x->x_env_sym[num]->s_name);
         	 x->x_env_buf[num] = 0;
 	     }
-	     else garray_usedindsp(a);
+	     else 
+	     {
+	     	garray_usedindsp(a);
+	     	x->x_env_buf[num] = num;
+	     }
 #endif
 
 }
